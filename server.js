@@ -6,8 +6,9 @@ const app = express()
 
 app.use('/', serveStatic(path.join(__dirname, '/dist')))
 
-app.get('/auth', function(req, res) {
+app.get('/*', function(req, res) {
     console.log('Entrou em auth')
+    res.send()
 })
 
 const port = process.env.PORT || 8080
