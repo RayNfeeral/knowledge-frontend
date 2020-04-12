@@ -8,7 +8,7 @@ app.use('/', serveStatic(path.join(__dirname, '/dist')))
 
 app.get('/*', function(req, res) {
     console.log(__dirname + '/dist')
-    res.sendFile(__dirname + '/dist')
+    res.sendFile(__dirname + '/dist/index.html')
 })
 
 const port = process.env.PORT || 8080
