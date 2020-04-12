@@ -4,10 +4,8 @@ const path = require('path')
 
 const app = express()
 
-const regex = new RegExp('*')
-
 app.use('/', serveStatic(path.join(__dirname, '/dist')))
-app.get(regex, (req, res) => {
+app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, '/dist'))
 })
 
